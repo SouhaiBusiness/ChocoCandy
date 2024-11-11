@@ -40,14 +40,22 @@ nav a, i{
     color: #fff;
 }
 
-.cntr-nav{
+.menu-nav{
     display: flex;
     gap: 3vw;
 }
 
+
 nav i{
     font-size: 1.5vw;
 }
+
+.menu-icon,
+.close-icon {
+    display: none;
+    cursor: pointer;
+}
+
 
 .header{
     display: flex;
@@ -160,3 +168,57 @@ nav i{
 }
 
 
+@media (max-width: 767px) {
+    .menu-nav {
+        flex-direction: column;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        background: rgba(255, 255, 255, 0.1);
+         backdrop-filter: blur(10px);
+        width: 100%;
+        padding: 20px;
+        border-radius: 8px;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 2s ease;
+    }
+
+     .logo{
+        width: 4.5rem;
+        height: 4.5rem;
+     }
+
+    .menu-nav a {
+        margin: 1rem 0;
+        font-size: 1.2rem;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+    .menu-icon i,
+    .close-icon i{
+        font-size: 1rem;
+    }
+    .close-icon{
+        z-index: 1000;
+    }
+
+    .menu-nav.active {
+         display: flex;
+        transform: translateX(0);
+    }
+
+    .about-right h1{
+       font-size: 1.5rem;
+    }
+     .about-right p{
+       font-size: 1rem;
+    }
+    .about{
+        
+       flex-direction: column;
+    }
+}
