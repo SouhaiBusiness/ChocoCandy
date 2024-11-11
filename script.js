@@ -59,3 +59,14 @@ tl2.to("#choco-candy",{
     rotate: "0deg"
 }, 'can')
 
+
+
+
+
+  // nav bar responsiveness
+        function toggleMenu() {
+        const nav = document.querySelector('.menu-nav');
+        nav.classList.toggle('active');
+        document.querySelector('.menu-icon').style.display = nav.classList.contains('active') ? 'none' : 'block';
+        document.querySelector('.close-icon').style.display = nav.classList.contains('active') ? 'block' : 'none';
+    }
