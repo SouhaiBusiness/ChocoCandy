@@ -4,6 +4,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "EB Garamond", serif;
+    scroll-behavior: smooth;
+
 }
 html , body{
     height: 100%;
@@ -210,15 +212,12 @@ nav i{
          display: flex;
         transform: translateX(0);
     }
-
+   
     .about-right h1{
        font-size: 1.5rem;
     }
      .about-right p{
        font-size: 1rem;
     }
-    .about{
-        
-       flex-direction: column;
-    }
+ 
 }
