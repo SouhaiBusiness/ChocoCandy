@@ -1,3 +1,5 @@
+
+
 var tl = gsap.timeline({scrollTrigger:{
     trigger: ".about",
     start: "0% 95%",
@@ -6,18 +8,19 @@ var tl = gsap.timeline({scrollTrigger:{
     // markers: true,
 }})
 
+
 tl.to("#choco-candy",{
-    top: "120%",
+    top: "180%",
     left: "12%",
     rotate: "30deg"
 }, 'choclate')
 tl.to("#choclate",{
     top:"160%",
-    left: "23%"
+    left: "-10%"
 }, 'choclate')
 tl.to("#choclate2",{
     width: "21%",
-    top:"160%",
+    top:"100%",
     right: "10%",
     rotate: "-15deg"
 }, 'choclate')
@@ -33,7 +36,7 @@ tl.to("#almod2",{
     left: "0%"
 }, 'choclate')
 
-
+gsap.set(".about", { perspective: 1000 });
 var tl2 = gsap.timeline({scrollTrigger:{
     trigger: ".product",
     start: "0% 95%",
@@ -54,11 +57,14 @@ tl2.to("#choclate2",{
 }, 'can')
 tl2.to("#choco-candy",{
     width:"30%",
-    top: "247%",
+    top: "250%",
     left: "35%",
-    rotate: "0deg"
+    rotate: "-20deg",
+    rotateY: 0,
+    rotateX: 20, 
+    rotationZ: -10, // Rotate around X axis
+    duration: 1
 }, 'can')
-
 
 
 
